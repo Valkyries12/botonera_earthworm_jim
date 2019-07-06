@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(../img/jim-fondo-verde.jpg);
+    background-position: center;
+}
+.keys {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 1fr;
+    height: 100vh;
+    width: 100%;
+}
+.key {
+    border: 3px solid #8CFF80;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-self: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 20px;
+    transition: .7s;
+}
+kbd {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: #A499FF;
+}
+span {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #A499FF;
+}
+.playing {
+    transform: scale(1.2);
+}
+
+
+/***320 movil
+/********************************************************/
+
+@media (min-width: 320px) and (max-width: 766px){
+    * {
+        font-size: 12px;
+    }
+    
+    .keys {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .key {
+        max-width: 170px;
+    }
+}
+
+/***768px tablet
+*************************************************************/
+
+@media (min-width: 767px) and (max-width: 1023px){
+    * {
+        font-size: 14px;
+    }
+
+    .keys {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .key {
+        max-width: 200px;
+    }
+
+}
+
+/*** 1024px 
+*********************************************************************/
+
+@media (min-width: 1023px) and (max-width: 1439px) {
+    * {
+        font-size: 16px;
+    }
+
+    .keys {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .key {
+        max-width: 170px;
+    }
+}
